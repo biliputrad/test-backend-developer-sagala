@@ -1,0 +1,309 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "d79a0804-9e88-4571-857c-1a7743954c59",
+      "name": "Test Backend Developer Sagala",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2024-07-31T04:41:31.000Z",
+      "createdAt": "2024-07-31T04:34:03.000Z",
+      "lastUpdatedBy": "21736024",
+      "uid": "21736024-d79a0804-9e88-4571-857c-1a7743954c59"
+    },
+    "item": [
+      {
+        "name": "Article",
+        "item": [
+          {
+            "name": "Create",
+            "id": "e3127f1b-8fb0-42e9-98b1-e0d023f2b084",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "auth": {
+                "type": "bearer",
+                "bearer": [
+                  {
+                    "key": "token",
+                    "value": "",
+                    "type": "string"
+                  }
+                ]
+              },
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"author\": \"\",\n    \"title\": \"\",\n    \"body\": \"\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{localhost}}/article-service/",
+                "host": [
+                  "{{localhost}}"
+                ],
+                "path": [
+                  "article-service",
+                  ""
+                ]
+              }
+            },
+            "response": [],
+            "uid": "21736024-e3127f1b-8fb0-42e9-98b1-e0d023f2b084"
+          },
+          {
+            "name": "Get Detail",
+            "id": "0c39a9d1-fb8d-4648-b264-8ee4a818ca8b",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "auth": {
+                "type": "bearer",
+                "bearer": [
+                  {
+                    "key": "token",
+                    "value": "",
+                    "type": "string"
+                  }
+                ]
+              },
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{localhost}}/article-service/:id",
+                "host": [
+                  "{{localhost}}"
+                ],
+                "path": [
+                  "article-service",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": ""
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "21736024-0c39a9d1-fb8d-4648-b264-8ee4a818ca8b"
+          },
+          {
+            "name": "Get All",
+            "id": "6c231c07-b087-4c57-81eb-3869fa00bbdb",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "auth": {
+                "type": "bearer",
+                "bearer": [
+                  {
+                    "key": "token",
+                    "value": "",
+                    "type": "string"
+                  }
+                ]
+              },
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{localhost}}/article-service/?limit&page&sort&sort_value&search&filter",
+                "host": [
+                  "{{localhost}}"
+                ],
+                "path": [
+                  "article-service",
+                  ""
+                ],
+                "query": [
+                  {
+                    "key": "limit",
+                    "value": null,
+                    "type": "text"
+                  },
+                  {
+                    "key": "page",
+                    "value": null,
+                    "type": "text"
+                  },
+                  {
+                    "key": "sort",
+                    "value": null,
+                    "type": "text"
+                  },
+                  {
+                    "key": "sort_value",
+                    "value": null,
+                    "type": "text"
+                  },
+                  {
+                    "key": "search",
+                    "value": null,
+                    "type": "text"
+                  },
+                  {
+                    "key": "filter",
+                    "value": null,
+                    "type": "text"
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "21736024-6c231c07-b087-4c57-81eb-3869fa00bbdb"
+          },
+          {
+            "name": "Delete",
+            "id": "d8ca42b2-ea03-416b-864f-4c4066a6a76f",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "auth": {
+                "type": "bearer",
+                "bearer": [
+                  {
+                    "key": "token",
+                    "value": "",
+                    "type": "string"
+                  }
+                ]
+              },
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "{{localhost}}/article-service/:id",
+                "host": [
+                  "{{localhost}}"
+                ],
+                "path": [
+                  "article-service",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": ""
+                  }
+                ]
+              }
+            },
+            "response": [],
+            "uid": "21736024-d8ca42b2-ea03-416b-864f-4c4066a6a76f"
+          }
+        ],
+        "id": "4a2f2126-0da3-41e2-a0a1-07facfabc463",
+        "uid": "21736024-4a2f2126-0da3-41e2-a0a1-07facfabc463"
+      },
+      {
+        "name": "User",
+        "item": [
+          {
+            "name": "Register",
+            "id": "432f3897-d6bc-48df-8a8f-229c6a97996c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"username\": \"\",\n    \"password\": \"\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{localhost}}/user-service/",
+                "host": [
+                  "{{localhost}}"
+                ],
+                "path": [
+                  "user-service",
+                  ""
+                ]
+              }
+            },
+            "response": [],
+            "uid": "21736024-432f3897-d6bc-48df-8a8f-229c6a97996c"
+          },
+          {
+            "name": "Login",
+            "id": "39863817-82e6-430b-9cfc-0afc6c12fd3a",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"username\": \"\",\n    \"password\": \"\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{localhost}}/user-service/login",
+                "host": [
+                  "{{localhost}}"
+                ],
+                "path": [
+                  "user-service",
+                  "login"
+                ]
+              }
+            },
+            "response": [],
+            "uid": "21736024-39863817-82e6-430b-9cfc-0afc6c12fd3a"
+          }
+        ],
+        "id": "3dc9cb94-c8a7-4fe8-beea-8272bfdda06b",
+        "uid": "21736024-3dc9cb94-c8a7-4fe8-beea-8272bfdda06b"
+      }
+    ],
+    "event": [
+      {
+        "listen": "prerequest",
+        "script": {
+          "id": "080b99e2-127c-441f-854c-7c3094744533",
+          "type": "text/javascript",
+          "packages": {},
+          "exec": [
+            ""
+          ]
+        }
+      },
+      {
+        "listen": "test",
+        "script": {
+          "id": "0d152a29-6064-4a4e-a505-1825ee0743f6",
+          "type": "text/javascript",
+          "packages": {},
+          "exec": [
+            ""
+          ]
+        }
+      }
+    ],
+    "variable": [
+      {
+        "key": "localhost",
+        "value": "http://localhost:8080/api/v1",
+        "type": "string"
+      }
+    ]
+  }
+}
